@@ -1,18 +1,25 @@
-from pathlib import Path
-
-# Recreate the updated HTML after kernel reset with the real Formspree link
-final_html_with_real_form = """
+# Full upgraded HTML with complete SEO tags, OpenGraph, Twitter cards, and ready for Google Search Console
+full_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DataNobel - Creative Intelligence in Data, AI, and Analytics.">
-  <meta property="og:title" content="DataNobel">
-  <meta property="og:description" content="Creative Intelligence in Data, AI, and Analytics.">
-  <meta property="og:image" content="datanobel_logo.png">
-  <meta property="og:url" content="https://www.datanobel.se">
   <title>DataNobel | Creative Intelligence in Data, AI, and Analytics</title>
+  <meta name="title" content="DataNobel - Creative AI & Data Solutions">
+  <meta name="description" content="DataNobel is a research-driven data consultancy using AI, ML, and automation for transformative analytics.">
+  <meta name="keywords" content="DataNobel, data engineering, data science, AI, NLP, omics, analytics, machine learning, research automation, Sweden, consultancy">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.datanobel.se/" />
+  <meta property="og:title" content="DataNobel - Creative Intelligence in Data">
+  <meta property="og:description" content="DataNobel is a research-driven data consultancy using AI, ML, and automation for transformative analytics.">
+  <meta property="og:image" content="https://www.datanobel.se/datanobel_logo.png">
+  <meta property="og:url" content="https://www.datanobel.se">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DataNobel - Creative Intelligence in Data">
+  <meta name="twitter:description" content="Advanced AI, NLP, data engineering and omics analytics for modern data-driven research.">
+  <meta name="twitter:image" content="https://www.datanobel.se/datanobel_logo.png">
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -156,7 +163,7 @@ final_html_with_real_form = """
 </html>
 """
 
-# Save the final version with working Formspree integration
-final_path = Path("/mnt/data/index_datanobel_live_form.html")
-final_path.write_text(final_html_with_real_form, encoding="utf-8")
-final_path.name
+# Save the complete HTML
+seo_ready_path = Path("/mnt/data/index_datanobel_seo_ready.html")
+seo_ready_path.write_text(full_html, encoding="utf-8")
+seo_ready_path.name
