@@ -1,4 +1,7 @@
+from pathlib import Path
 
+# Recreate the updated HTML after kernel reset with the real Formspree link
+final_html_with_real_form = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,21 +140,12 @@
 <section id="contact">
   <h2>Contact Us</h2>
   <p>For inquiries, collaborations, or project proposals, please fill out the form below:</p>
-  <form
-  action="https://formspree.io/f/mpwpkjpk"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+  <form action="https://formspree.io/f/mpwpkjpk" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
@@ -160,3 +154,9 @@
 
 </body>
 </html>
+"""
+
+# Save the final version with working Formspree integration
+final_path = Path("/mnt/data/index_datanobel_live_form.html")
+final_path.write_text(final_html_with_real_form, encoding="utf-8")
+final_path.name
