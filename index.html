@@ -15,10 +15,18 @@
       color: #333;
     }
     header {
-      height: 350px;
-      background: url('./datanobel_logo.jpg') center center / contain no-repeat, #ffffff;
-      background-repeat: no-repeat;
-      background-position: center;
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0;
     }
     .cta-button {
       background-color: #ffffff;
@@ -110,16 +118,16 @@
       margin-top: 2rem;
     }
     @media screen and (max-width: 600px) {
-      header {
-        background-size: cover;
-      }
       nav a { display: block; margin: 10px 0; }
     }
   </style>
 </head>
 <body>
 
-<header></header>
+<header>
+  <h1>DataNobel</h1>
+  <p>Creative Intelligence in Data, AI, and Analytics</p>
+</header>
 
 <nav>
   <a href="#about">About</a>
