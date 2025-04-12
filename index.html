@@ -15,27 +15,10 @@
       color: #333;
     }
     header {
-      background: url('datanobel_logo.jpg') center/cover no-repeat;
+      background: url('datanobel_logo.jpg') center/contain no-repeat;
       height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    header h1 {
-      position: relative;
-      color: white;
-      font-size: 2.5rem;
-      z-index: 1;
+      background-color: #000;
+      background-blend-mode: multiply;
     }
     .cta-button {
       background-color: #ffffff;
@@ -127,16 +110,16 @@
       margin-top: 2rem;
     }
     @media screen and (max-width: 600px) {
-      header h1 { font-size: 2rem; }
+      header {
+        background-size: cover;
+      }
       nav a { display: block; margin: 10px 0; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>DataNobel</h1>
-</header>
+<header></header>
 
 <nav>
   <a href="#about">About</a>
